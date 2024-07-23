@@ -1,0 +1,103 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Flask stuff:
+instance/
+.webassets-cache
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Editor and IDE stuff
+*.swp
+*~
+.project
+.idea/
+.vscode/
+
+# Database
+*.sqlite3
+*.db
+
+# Logs
+*.log
+
+# MacOS stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk drives or network mounts
+.Spotlight-V100
+.Trashes
+
+# Ignore all static files except custom ones
+static/*
+!static/.gitkeep
+
+# Ignore all uploads except custom ones
+uploads/*
+!uploads/.gitkeep
+
+# Ignore local configuration files
+config.py
+config.yaml
+instance/config.py
+instance/config.yaml
