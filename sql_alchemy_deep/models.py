@@ -1,6 +1,5 @@
 from datetime import datetime, timezone
 from sqlalchemy.ext.declarative import declared_attr
-from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 from . import db
 
 
