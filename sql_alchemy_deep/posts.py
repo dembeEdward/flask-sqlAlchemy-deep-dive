@@ -15,6 +15,7 @@ class Posts(MethodView):
     @posts_bp.arguments(PostSchema)
     @posts_bp.response(201, PostSchema)
     def post(self, post):
+        """Add a new post"""
         db.session.add(post)
         db.session.commit()
         return post, 201
@@ -29,12 +30,14 @@ class Posts(MethodView):
 class PostById(MethodView):
     @posts_bp.response(200, PostSchema)
     def get(self, id):
+        """Get a post by id"""
         post = Post.query.get_or_404(id)
         return post, 200
 
     @posts_bp.arguments(PostSchema)
     @posts_bp.response(200, PostSchema)
     def put(self, post_update, id):
+        """Update a post by id"""
         post = Post.query.get_or_404(id)
         post.title = post_update.title
         post.content = post_update.content
@@ -46,6 +49,7 @@ class PostById(MethodView):
 @posts_bp.arguments(MultipartFileSchema, location='files')
 @posts_bp.response(201, PostSchema)
 def upload_image(files):
+    """Upload an image"""
     try:
         base_dir = 'static'
         file_1 = files['file_1']

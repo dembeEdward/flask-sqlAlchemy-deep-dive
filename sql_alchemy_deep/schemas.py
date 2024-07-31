@@ -1,6 +1,6 @@
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 from flask_smorest.fields import Upload
-import marshmallow
+import marshmallow as ma
 from .models import User, Post
 from . import db
 
@@ -20,6 +20,8 @@ class PostSchema(SQLAlchemyAutoSchema):
         include_relationships = True
         sqla_session = db.session
 
+    author = ma.fields.Number()
 
-class MultipartFileSchema(marshmallow.Schema):
+
+class MultipartFileSchema(ma.Schema):
     file_1 = Upload()

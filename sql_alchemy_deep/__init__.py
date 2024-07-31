@@ -18,6 +18,9 @@ def create_app():
     app.config['API_TITLE'] = 'Blog API'
     app.config['API_VERSION'] = 'v1'
     app.config['OPENAPI_VERSION'] = '3.0.2'
+    app.config['OPENAPI_URL_PREFIX'] = '/'
+    app.config['OPENAPI_RAPIDOC_PATH'] = '/documentation'
+    app.config['OPENAPI_RAPIDOC_URL'] = 'https://unpkg.com/rapidoc/dist/rapidoc-min.js'
 
     db.init_app(app)
 

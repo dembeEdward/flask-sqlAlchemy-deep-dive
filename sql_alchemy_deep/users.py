@@ -13,11 +13,13 @@ class Users(MethodView):
     @users_bp.arguments(UserSchema)
     @users_bp.response(201, UserSchema)
     def post(self, user):
+        """Add a new user"""
         db.session.add(user)
         db.session.commit()
         return user, 201
 
     @users_bp.response(200, UserSchema(many=True))
     def get(self):
+        """Get all users"""
         users = User.query.all()
         return users, 200
